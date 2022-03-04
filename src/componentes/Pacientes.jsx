@@ -14,7 +14,7 @@ const Pacientes = ({paciente, setsPaciente,delPaciente,bPaciente}) => {
     <p className='uppercase font-bold'>Sintomas: <span className='font-normal normal-case'>
       {paciente.sintomas}</span></p>
     <div className="flex justify-between">
-      <button className="p-4 mt-2 bg-green-300 font-bold rounded-xl"
+      <button className="p-4 mt-2 bg-green-300 font-bold rounded-xl text-white"
       onClick={()=>{setsPaciente(paciente)}}
       >Editar</button>
       <button className="p-4 mt-2 bg-red-300 font-bold rounded-xl"

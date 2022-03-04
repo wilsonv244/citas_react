@@ -23,6 +23,7 @@ function App() {
   return (
     <div className="container m-auto mt-6">
       <Header      
+      
       />
       <div className="mt-12 lg:grid lg:grid-cols-2 flex-col justify-center ml-5">
         <Formulario
