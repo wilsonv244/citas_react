@@ -2,7 +2,7 @@ import {useState, useEffect} from "react"
 import Formulario from "./componentes/Formulario"
 import Header from "./componentes/Header"
 import ListaPacientes from "./componentes/ListaPacientes"
-
+import Footer from "./componentes/Footer"
 function App() {
   const [paciente, setPaciente]=useState([]);
   const [sPaciente, setsPaciente] = useState({})
@@ -21,28 +21,34 @@ function App() {
     localStorage.setItem('datosPacientes', JSON.stringify(paciente));
   },[paciente])
   return (
-    <div className="container m-auto mt-6">
-      <Header      
-      
-      />
-      <div className="mt-12 lg:grid lg:grid-cols-2 flex-col justify-center ml-5">
-        <Formulario
-          setPaciente={setPaciente}
-          paciente={paciente}
-          setsPaciente={setsPaciente}
-          sPaciente = {sPaciente}
-          bPaciente={bPaciente}
-          />
-        <ListaPacientes
-          bPaciente={bPaciente}
-          setsPaciente={setsPaciente}
-          paciente={paciente}
-          sPaciente = {sPaciente}
-          delPaciente ={delPaciente}
+    <>
+      <div className="container m-auto mt-6">
+        <div>
+          <Header      
 
-        />
+          />
+          <div className="mt-12 lg:grid lg:grid-cols-2 flex-col justify-center ml-5">
+            <Formulario
+              setPaciente={setPaciente}
+              paciente={paciente}
+              setsPaciente={setsPaciente}
+              sPaciente = {sPaciente}
+              bPaciente={bPaciente}
+              />
+            <ListaPacientes
+              bPaciente={bPaciente}
+              setsPaciente={setsPaciente}
+              paciente={paciente}
+              sPaciente = {sPaciente}
+              delPaciente ={delPaciente}
+
+            />
+          </div>
+        </div>
       </div>
-    </div>
+          <Footer/>
+
+    </>
   )
 }
 
